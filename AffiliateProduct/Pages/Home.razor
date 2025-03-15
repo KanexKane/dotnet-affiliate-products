@@ -1,52 +1,51 @@
 ﻿@page "/"
 
 <PageTitle>KanexKane | &#64;kanexkane79</PageTitle>
-<div class="container">
-    <header class="d-flex justify-content-around align-items-center text-center mb-4">
-        <div class="d-inline-block">
-            <div class="logo rounded-circle border border-2 border-primary"></div>
-            <h1 class="h6 text-primary bg-white border pb-1 rounded border-primary">&#64;kanexkane79</h1>
-        </div>
 
-        <div class="d-inline-block bg-white social-icons mt-3 border border-2 border-primary rounded pb-1">
-            <a href="https://www.facebook.com/kanexkanecom" target="_blank" class="text-primary"><i
-                    class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kanexkane" target="_blank" class="text-danger"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/&#64;kanexkane79" target="_blank" class="text-dark"><i
-                    class="fab fa-tiktok"></i></a>
-        </div>
+<header class="d-flex justify-content-around align-items-center text-center mb-4">
+    <div class="d-inline-block">
+        <div class="logo rounded-circle border border-2 border-primary"></div>
+        <h1 class="h6 text-primary bg-white border pb-1 rounded border-primary">&#64;kanexkane79</h1>
+    </div>
 
-    </header>
+    <div class="d-inline-block bg-white social-icons mt-3 border border-2 border-primary rounded pb-1">
+        <a href="https://www.facebook.com/kanexkanecom" target="_blank" class="text-primary"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/kanexkane" target="_blank" class="text-danger"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/&#64;kanexkane79" target="_blank" class="text-dark"><i
+                class="fab fa-tiktok"></i></a>
+    </div>
+
+</header>
 
 
-    @* <div class="d-flex justify-content-end">
+@* <div class="d-flex justify-content-end">
         <select value="@selectedOrderBy" @onchange="OnSortChanged" class="mb-3">
             <option value="order">เรียงตามลำดับ</option>
             <option value="name">เรียงตามชื่อ</option>
         </select>
     </div> *@
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gx-2 gy-2">
-        @foreach (var product in products)
-        {
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="card">
-                    <div class="card-image" style="background-image: url(@product.Image);"></div>
-                    <div class="card-title">@product.Name</div>
-                    <div class="card-action">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gx-2 gy-2">
+    @foreach (var product in products)
+    {
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+            <div class="card">
+                <div class="card-image" style="background-image: url(@product.Image);"></div>
+                <div class="card-title">@product.Name</div>
+                <div class="card-action">
 
-                        <a href="@product.ShopeeUrl" target="_blank" class="btn btn-shopee text-white w-100">ซื้อที่
-                            Shopee</a>
+                    <a href="@product.ShopeeUrl" target="_blank" class="btn btn-shopee text-white w-100">ซื้อที่
+                        Shopee</a>
 
 
-                        <a href="@product.TiktokUrl" target="_blank"
-                            class="btn btn-tiktok text-white w-100 mt-2 @(string.IsNullOrEmpty(product.TiktokUrl) ? "disabled-button-v2" : "")">ดูที่
-                            TikTok</a>
+                    <a href="@product.TiktokUrl" target="_blank"
+                        class="btn btn-tiktok text-white w-100 mt-2 @(string.IsNullOrEmpty(product.TiktokUrl) ? "disabled-button-v2" : "")">ดูที่
+                        TikTok</a>
 
-                    </div>
                 </div>
             </div>
+        </div>
 
-        }
-    </div>
+    }
 </div>

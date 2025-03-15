@@ -135,6 +135,7 @@ code {
     background-size: contain;
     background-color: black;
     background-blend-mode: luminosity;
+    min-height: 100vh;
 }
 
 
