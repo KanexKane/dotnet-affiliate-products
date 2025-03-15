@@ -166,8 +166,9 @@ code {
     height: 200px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    border-radius: 7px 7px 0 0;
 }
 
 .card-title {
@@ -238,6 +239,7 @@ code {
     user-select: none;
     /* ป้องกันการเลือกข้อความ */
     pointer-events: none;
+    opacity: 0.5;
 }
 
 .disabled-button-v3 {

@@ -19,8 +19,14 @@
 
     </header>
 
+    @* <div class="d-flex justify-content-end">
+        <select value="@selectedOrderBy" @onchange="OnSortChanged" class="mb-3">
+            <option value="order">เรียงตามลำดับ</option>
+            <option value="name">เรียงตามชื่อ</option>
+        </select>
+    </div> *@
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gx-2 gy-2">
-        @foreach (var product in products.OrderBy(p => p.Order))
+        @foreach (var product in products)
         {
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
                 <div class="card">
