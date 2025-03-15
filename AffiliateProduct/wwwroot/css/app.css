@@ -8,8 +8,7 @@
 
 html,
 body {
-    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
-    font-family: 'Korbau', sans-serif;
+    font-family: 'Korbau', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 20px;
     /* ใช้ฟอนต์ Korbau */
     /* background-image: url('../images/bg.jpg'); */
