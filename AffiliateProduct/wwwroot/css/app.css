@@ -10,13 +10,6 @@ html,
 body {
     font-family: 'Korbau', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 20px;
-    /* ใช้ฟอนต์ Korbau */
-    /* background-image: url('../images/bg.jpg'); */
-    /* background-image: url('../images/bg2.png'); */
-    background-image: url('../images/bg3.jpg');
-    /* background-image: url('../images/bg4.jpg'); */
-    background-size: contain;
-    background-blend-mode: luminosity;
 }
 
 h1:focus {
@@ -137,6 +130,13 @@ code {
     text-align: start;
 }
 
+.page {
+    background-image: url('../images/bg3.jpg');
+    background-size: contain;
+    background-color: black;
+    background-blend-mode: luminosity;
+}
+
 
 .logo {
     width: 150px;
@@ -150,16 +150,20 @@ code {
     border-radius: 50%;
 }
 
-/* CSS สำหรับหน้า Affiliate Shop */
-.header {
-    padding: 20px 0;
-    text-align: center;
-}
 
 .social-icons a {
     margin: 0 10px;
     font-size: 2rem;
     text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: black;
+    -webkit-text-stroke: 1px red;
+}
+
+.card {
+    border: 2px solid #0071c1;
 }
 
 .card-image {
