@@ -2,3 +2,4 @@
 **/bin/Debug/
 .DS_Store
 **/wwwroot/fonts
+**/publish
