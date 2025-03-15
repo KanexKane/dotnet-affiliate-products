@@ -1,1 +1,0 @@
-/Users/kanexkane/Developments/DOTNET/AffiliateProduct/AffiliateProduct/publish/web.config

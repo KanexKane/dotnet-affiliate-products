@@ -1,5 +1,5 @@
-**/obj/Debug/
-**/bin/Debug/
 .DS_Store
 **/wwwroot/fonts
 **/publish
+**/bin
+**/obj
