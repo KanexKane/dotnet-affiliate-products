@@ -8,5 +8,4 @@
 เพิ่มรูปที่ `wwwroot/images/`
 
 ## Technical Detail
-
 พัฒนาด้วย ASP.NET C# 9 Blazor Webassembly [2025-03-16]
