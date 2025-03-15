@@ -22,4 +22,12 @@
     <Watch Include="wwwroot\**\*.*" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Compile Remove="Pages/admin/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages/admin/" />
+  </ItemGroup>
+
 </Project>
