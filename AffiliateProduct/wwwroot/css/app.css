@@ -179,6 +179,7 @@ code {
 
 .card-action {
     padding: 0 0.5rem 0.5rem;
+    height: 5.5rem;
 }
 
 
@@ -216,4 +217,33 @@ code {
 .btn {
     padding: 8px;
     font-size: 0.875rem;
+}
+
+.disabled-button {
+    pointer-events: none;
+    /* ปิดการคลิก */
+    opacity: 0.5;
+    /* จางลงให้ดูว่าใช้ไม่ได้ */
+    cursor: not-allowed;
+    /* เปลี่ยนเมาส์เป็นรูปห้าม */
+}
+
+.disabled-button-v2 {
+    background-color: #ccc;
+    /* สีจางๆ */
+    color: #666;
+    /* สีข้อความอ่อนลง */
+    border: 1px solid #aaa;
+    box-shadow: none;
+    user-select: none;
+    /* ป้องกันการเลือกข้อความ */
+    pointer-events: none;
+}
+
+.disabled-button-v3 {
+    background-color: transparent;
+    color: #bbb;
+    border: 2px dashed #aaa;
+    cursor: not-allowed;
+    pointer-events: none;
 }

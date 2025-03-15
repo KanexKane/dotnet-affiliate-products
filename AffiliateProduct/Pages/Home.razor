@@ -27,10 +27,15 @@
                     <div class="card-image" style="background-image: url(@product.Image);"></div>
                     <div class="card-title">@product.Name</div>
                     <div class="card-action">
+
                         <a href="@product.ShopeeUrl" target="_blank" class="btn btn-shopee text-white w-100">ซื้อที่
                             Shopee</a>
-                        <a href="@product.TiktokUrl" target="_blank" class="btn btn-tiktok text-white w-100 mt-2">ดูที่
+
+
+                        <a href="@product.TiktokUrl" target="_blank"
+                            class="btn btn-tiktok text-white w-100 mt-2 @(string.IsNullOrEmpty(product.TiktokUrl) ? "disabled-button-v2" : "")">ดูที่
                             TikTok</a>
+
                     </div>
                 </div>
             </div>
