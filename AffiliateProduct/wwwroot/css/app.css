@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Korbau';
-    src: url('../fonts/korbau.ttf') format('truetype');
-    /* ตรวจสอบ path */
+    src: url('/fonts/Korbau.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,7 +8,7 @@
 html,
 body {
     font-family: 'Korbau', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h1:focus {
@@ -82,56 +81,14 @@ a,
     content: "An error has occurred."
 }
 
-.loading-progress {
-    position: relative;
-    display: block;
-    width: 8rem;
-    height: 8rem;
-    margin: 20vh auto 1rem auto;
-}
-
-.loading-progress circle {
-    fill: none;
-    stroke: #e0e0e0;
-    stroke-width: 0.6rem;
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
-}
-
-.loading-progress circle:last-child {
-    stroke: #1b6ec2;
-    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-    transition: stroke-dasharray 0.05s ease-in-out;
-}
-
-.loading-progress-text {
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
-}
-
-.loading-progress-text:after {
-    content: var(--blazor-load-percentage-text, "Loading");
-}
-
 code {
     color: #c02d76;
 }
 
-.form-floating>.form-control-plaintext::placeholder,
-.form-floating>.form-control::placeholder {
-    color: var(--bs-secondary-color);
-    text-align: end;
-}
 
-.form-floating>.form-control-plaintext:focus::placeholder,
-.form-floating>.form-control:focus::placeholder {
-    text-align: start;
-}
 
 .page {
-    background-image: url('../images/bg3.jpg');
+    background-image: url('/images/bg3.jpg');
     background-size: contain;
     background-color: black;
     background-blend-mode: luminosity;
@@ -143,7 +100,7 @@ code {
     width: 150px;
     height: 150px;
     background-color: white;
-    background-image: url('../images/kanexkane-logo-512.png');
+    background-image: url('/images/kanexkane-logo-512.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -152,7 +109,7 @@ code {
 
 .social-icons a {
     margin: 0 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -169,9 +126,9 @@ code {
     height: 200px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border-radius: 7px 7px 0 0;
+    background-size: cover;
+    background-position: top;
+    border-radius: 4px 4px 0 0;
 }
 
 .card-title {
@@ -186,9 +143,6 @@ code {
     height: 5.5rem;
 }
 
-
-
-/* ปุ่ม Shopee และ TikTok */
 .btn-shopee {
     background-color: #ee4d2d;
     border-color: #ee4d2d;
@@ -199,9 +153,7 @@ code {
     background-color: #d73d1e;
     border-color: #d73d1e;
     transform: scale(1.05);
-    /* ขยายปุ่มเล็กน้อย */
     box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
-    /* เงาเข้มขึ้น */
 }
 
 .btn-tiktok {
@@ -213,11 +165,10 @@ code {
     background-color: #000000;
     border-color: #000000;
     transform: scale(1.05);
-    /* ขยายปุ่มเล็กน้อย */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ปุ่ม */
+
 .btn {
     padding: 8px;
     font-size: 0.875rem;
@@ -225,22 +176,16 @@ code {
 
 .disabled-button {
     pointer-events: none;
-    /* ปิดการคลิก */
     opacity: 0.5;
-    /* จางลงให้ดูว่าใช้ไม่ได้ */
     cursor: not-allowed;
-    /* เปลี่ยนเมาส์เป็นรูปห้าม */
 }
 
 .disabled-button-v2 {
     background-color: #ccc;
-    /* สีจางๆ */
     color: #666;
-    /* สีข้อความอ่อนลง */
     border: 1px solid #aaa;
     box-shadow: none;
     user-select: none;
-    /* ป้องกันการเลือกข้อความ */
     pointer-events: none;
     opacity: 0.5;
 }
