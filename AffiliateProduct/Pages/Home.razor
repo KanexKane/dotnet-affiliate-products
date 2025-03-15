@@ -1,0 +1,40 @@
+﻿@page "/"
+
+<PageTitle>KanexKane | &#64;kanexkane79</PageTitle>
+<div class="container">
+    <!-- ส่วนหัว -->
+    <header class="header text-center mb-4">
+
+        <img src="/images/kanexkane-logo-512.png" alt="Logo" style="width: 150px;" />
+        <h1 class="h6 mb-5 text-primary">&#64;kanexkane79</h1>
+
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/kanexkanecom" target="_blank" class="text-primary"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kanexkane" target="_blank" class="text-danger"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/&#64;kanexkane79" target="_blank" class="text-dark"><i
+                    class="fab fa-tiktok"></i></a>
+        </div>
+
+    </header>
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gx-2 gy-2">
+        @foreach (var product in products.OrderBy(p => p.Order))
+        {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="card">
+                    <div class="card-image" style="background-image: url(@product.Image);"></div>
+                    <div class="card-title">@product.Name</div>
+                    <div class="card-action">
+                        <a href="@product.ShopeeUrl" target="_blank" class="btn btn-shopee text-white w-100">ซื้อที่
+                            Shopee</a>
+                        <a href="@product.TiktokUrl" target="_blank" class="btn btn-tiktok text-white w-100 mt-2">ดูที่
+                            TikTok</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
